@@ -226,18 +226,6 @@ def prepare_dataset(t2017, is_train=True):
         X['mean_20_dow{}_2017'.format(i)] = get_timespan(df_2017, t2017, 140-i, 20, freq='7D').mean(axis=1).values
         X['mean_24_dow{}_2017'.format(i)] = get_timespan(df_2017, t2017, 168-i, 24, freq='7D').mean(axis=1).values
 
-    """ 
-    X['diff_mean_diff7_3_2017'] =  X["mean_3_2017"] - X["mean_diff7_3_2017"]
-    X['diff_mean_diff7_7_2017'] =  X["mean_7_2017"] - X["mean_diff7_7_2017"]
-    X['diff_mean_diff7_14_2017'] =  X["mean_14_2017"] - X["mean_diff7_14_2017"]
-    X['diff_mean_diff7_21_2017'] =  X["mean_21_2017"] - X["mean_diff7_21_2017"]
-    X['diff_mean_diff7_28_2017'] =  X["mean_28_2017"] - X["mean_diff7_28_2017"]
-    X['diff_mean_diff28_3_2017'] =  X["mean_3_2017"] - X["mean_diff28_3_2017"]
-    X['diff_mean_diff28_7_2017'] =  X["mean_7_2017"] - X["mean_diff28_7_2017"]
-    X['diff_mean_diff28_14_2017'] =  X["mean_14_2017"] - X["mean_diff28_14_2017"]
-    X['diff_mean_diff28_21_2017'] =  X["mean_21_2017"] - X["mean_diff28_21_2017"]
-    X['diff_mean_diff28_28_2017'] =  X["mean_28_2017"] - X["mean_diff28_28_2017"]
-    """
 
     for i in [7, 28]:
         X['diff_mean_diff{}_3_2017'.format(i)] =  X["mean_3_2017"] - X["mean_diff{}_3_2017".format(i)]
