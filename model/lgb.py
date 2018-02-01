@@ -265,7 +265,6 @@ def prepare_dataset(t2017, is_train=True):
 
 
 print("Preparing dataset...")
-#１週間ずつデータの期間をずらして、移動平均を作成
 t2017 = date(2017, 6, 21)
 X_l, y_l = [], []
 for i in range(4):
